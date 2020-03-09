@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -30,8 +31,7 @@ namespace UnitedWayPrototypeApplication.Models
         public string contributionlname { get; set; }
 
         [DataType(DataType.Text)]
-        [Display(Name = "Agency ID (optional)")]
-        [Required(ErrorMessage = "Agency ID must be valid.")]
+        [Display(Name = "Agency ID")]
         public int AgencyID { get; set; }
 
         [Display(Name = "Type of Contribution")]
@@ -40,13 +40,11 @@ namespace UnitedWayPrototypeApplication.Models
 
         [DataType(DataType.Currency)]
         [Display(Name = "Monthly Amount")]
-        [Required(ErrorMessage ="You must enter the monthly amount.")]
         public double UWMonthly { get; set; }
 
         [DataType(DataType.Text)]
         [Display(Name = "Number of Months")]
         [Range(0, 12, ErrorMessage = "Number of Months must be a valid number.")]
-        [Required(ErrorMessage = "You must enter the number of months.")]
         public int UWMonths { get; set; }
 
         [Display(Name = "Check Number")]
