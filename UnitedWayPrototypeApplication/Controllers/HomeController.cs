@@ -244,6 +244,7 @@ namespace UnitedWayPrototypeApplication.Controllers
                     model.DepartmentStatus, model.DepartmentDateCreated, model.DepartmentLastEdited);
             }
 
+            ModelState.Clear();
             return View();
         }
 
