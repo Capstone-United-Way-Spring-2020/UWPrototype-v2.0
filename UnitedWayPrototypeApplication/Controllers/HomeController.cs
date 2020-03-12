@@ -97,7 +97,7 @@ namespace UnitedWayPrototypeApplication.Controllers
         public ActionResult Agency()
         {
             ViewBag.Message = "Agency Overview";
-            //utilizing the SQL SELECT statements in AgencyProcessor to LOAD the agencies
+            //utilizing the SQL SELECT statements in AgencyProcessor to LOAD the agencies 
             var data = DataLibrary.BusinessLogic.AgencyProcessor.LoadAgencies();
 
             //using the SQL SELECT statements in AgencyProcessor to LOAD the agencies to a list
